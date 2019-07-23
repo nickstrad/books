@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    name: "",
+    url: "",
+    owned: false,
+    books: []
+  }
+
+  render() {
+    return (
+      <div className="App">
+      app
+        <input 
+          type="text" 
+          name="name" 
+          onChange={this.handleChange} 
+          value={this.state.name} 
+        />
+        <input 
+          type="text" 
+          name="url" 
+          onChange={this.handleChange} 
+          value={this.state.url} 
+        />
+        <input 
+          type="text" 
+          name="owned" 
+          onChange={this.handleChange} 
+          value={this.state.owned} 
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
